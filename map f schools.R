@@ -7,8 +7,7 @@ library(OpenStreetMap)
 # LILLE
 
 schools1 <- read_sf("./Lille.geojson")
-basemap1 <-
-  read_osm(schools1, minNumTiles = 20, type = "stamen-terrain")
+basemap1 <- read_osm(schools1, minNumTiles = 20, type = "stamen-terrain")
 png("./Lille.png", width = 3000, height = 3000)
 tm_shape(basemap1) +
   tm_rgb() +
@@ -22,10 +21,10 @@ tm_shape(basemap1) +
   tm_scale_bar(
     color.dark = "grey20",
     position = c("left", "bottom"),
-    size = 4
+    size = 5.5
   ) +
   tm_compass(
-    size = 20,
+    size = 25,
     position = c("left", "top"),
     color.dark = "grey20",
     just = "bottom"
@@ -72,7 +71,7 @@ tm_shape(basemap2) +
   )
 dev.off()
 
-# LYON #
+# LYON 
 
 schools3 <- read_sf("./Lyon.geojson")
 basemap3 <-
