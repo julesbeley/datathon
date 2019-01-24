@@ -50,7 +50,5 @@ p <- ggplot() +
     panel.background = element_rect(fill = "#f5f5f2", color = NA),
     legend.background = element_rect(fill = "#f5f5f2", color = NA)
   ) +
-  coord_fixed(xlim = c(2.7,3.5),
-              ylim = c(50.5, 50.75),
-              ratio = 1.5)
+  coord_map()
 p
